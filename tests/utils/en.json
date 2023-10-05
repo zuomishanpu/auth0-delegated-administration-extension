@@ -4,7 +4,8 @@
   "searchBarPlaceholder": "Search for users using the Lucene syntax",
 
   "deviceNameColumnHeader": "Device",
-  "deviceNumberTokensColumnHeader": "# of Tokens/Public Keys",
+  "cilentNameColumnHeader": "Client",
+  "deviceNumberTokensColumnHeader": "Number of Refresh Tokens",
   "noDevicesMessage": "This user does not have any registered devices.",
 
   "usersAndLogsMenuItemText": "Users & Logs",
