@@ -73,7 +73,7 @@ const userDevices = createReducer(fromJS(initialState.devices), {
     }),
   [constants.FETCH_USER_DEVICES_FULFILLED]: (state, action) => {
     const devices = action.payload.data.devices.reduce((map, device) => {
-      map[device.device_name] = (map[device.device_name] || 0) + 1;
+      map[`${device.client_id}_${device.device_name}`] = {count:(map[`${device.client_id}_${device.device_name}`]?map[`${device.client_id}_${device.device_name}`].count:0) + 1, clientName:device.client_name,deviceName:device.device_name};
       return map;
     }, { });
 
