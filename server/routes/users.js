@@ -509,8 +509,10 @@ export default (storage, scriptManager) => {
               }
               return false;
             }).map(device => {
-              return { ...device, client_name: clients.find(client => client.client_id === device.client_id).name }
-            })
+              const target = clients.find(client => client.client_id === device.client_id);
+              console.log(target)
+                            return { ...device, client_name: target ? target.name : "名称無し" }
+                          })
             return res.json({ devices });
           } catch (err) {
             return next(err);
